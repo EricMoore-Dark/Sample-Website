@@ -1,0 +1,199 @@
+<!-- ******************************************************************* -->
+<!--  File Information -->
+<!--  Document Name:  Project3.html -->
+<!--  Author: Eric Moore -->
+<!--  Date Created: 3/19/2021 -->
+<!--  Date Updated: 3/19/2021    (Heading Level 5 has been added.)       -->
+<!--  Description:This project has a header above it with two pictures and text   -->
+<!--  As well as a javascript box with slection list and css box with picture inside         -- >
+<!--  Theres also a blinking header with a blue background that flashes in and out yellow   -- >
+<!--  At the bottom of the page is a footer with a black border and yellow text and a paragraph. -- >   
+<!--  Alot of what was done is saved in divs along with the multi image background with text. -- >                                      
+<!-- ******************************************************************** -->  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Project3</title>
+<style type="text/css">
+
+body { background-color: #add8e6;
+
+}div.multi {
+  background-image: url(pic1.png), url(pic2.png);
+  background-position: right bottom, center;
+  background-repeat: no-repeat, repeat;
+  padding: 40px;
+
+}div.content{           
+	 padding: 10px 15px;            
+	 color: white;            
+	 font-size: 150%;         
+}p1{ 
+	color: #FFFF00;
+}p2{ 
+	color: #0000ff;
+	font-weight: bold;
+	font-size: 30px;
+
+}.blink {
+animation:1s blinker linear infinite;
+-  webkit-animation:1s blinker linear infinite;
+-  moz-animation:1s blinker linear infinite;
+}
+	@-moz-keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+	}
+	
+	@-webkit-keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+	}
+
+	@keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+	
+}h1{ 
+	color: #FFFF00;
+	font-size: 40px;
+} div.box{
+	background-color: lightgreen;
+	width: 50%;
+	border: 3px solid blue;
+	color: #0000ff;
+	float: right;
+	
+}h3{
+	color: #00008b;
+	font-weight: bold;
+	font-size: 25px;
+
+}div.container{
+	width: 40%;
+	margin: 10px auto;
+	color: black;
+	float: left;
+	
+}div.clear{
+ 	clear: both;
+}div.footer {
+  background-color: #000000;
+  color: #FFFF00;
+
+}A {
+text-decoration: none;
+color: #FFFF00;
+}
+</style>
+</head>
+<body>
+
+<div class="multi"> 
+<div class="content">
+<p1> The major social media platform (at the moment) are Facebook, Instagram, Twitter, LinkedIn,
+ Pinterest, YouTube, and Snapchat.</p1>
+</div>
+</div>
+<div style="background-color: #00008B;">
+<center><h1 class="blink"> Social Media Marketing</h1></center>
+</div>
+<br>
+
+<marquee behavior="scroll" direction="left" style="color:blue;">
+<img src= "pic1.png" width= "100" height= "100" alt= "social media marketing"/> 
+<p2>Facebook LinkedIn Twitter Instagram Youtube.</p2>
+</marquee>
+
+<div class="box">
+<br>
+<br>
+<center><h3> Social Media Marketing</h3></center>
+<br>
+<img src= "pic1.png" style="border: 3px solid black; margin-right: 10px" align="left" width= "80" height= "60" alt= "social media marketing"/>
+
+<p>The major social media platforms(at the moment) are Facebook, Instagram, Twitter, LinkedIn, 
+Pinterest, Youtube, and Snapchat. The major social media platforms (at the moment) are Facebook, 
+Instagram, Twitter, LinkedIn, Pinterest, Youtube, and Snapchat. The major social media 
+platforms (at moment) are Facebook, Instagram, Twitter, LinkedIn, Pinterest, Youtube,
+and Snapchat. The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat.The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat. The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat. The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat.The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat.The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat.The major social media platforms (at the moment) are Facebook, Instagram, 
+Twitter, LinkedIn, Pinterest, Youtube, and Snapchat. </p>
+</div>
+
+<div id="container">
+<p> Select your favorite Social Media: </p>
+    <select id="selectBox">
+        
+        <option value="Facebook">Facebook</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Twitter">Twitter</option>
+        <option value="Youtube">Youtube</option>
+
+       </select>
+<button id="Btn1">Click me!</button>
+<button id="Btn2">Output all options</button>
+
+
+<p id="selected_media"></p>
+</div>
+
+<script> 
+        var divContainer = document.getElementById("container"); 
+        divContainer.style.backgroundColor="yellow";
+        divContainer.style.border="5px dashed red";
+        divContainer.style.height="50vh";
+	divContainer.style.width="40%";
+        divContainer.style.padding="2px 5px 2px 5px";
+    function clickFunc(){
+        var selectBox = document.getElementById("selectBox");
+     // divContainer.style.border="5px dashed red";
+        document.getElementById("selected_media").innerHTML="";
+    }
+
+document.getElementById("Btn1").addEventListener("click", function() {
+  let selectOption= document.getElementById("selectBox").value;
+  document.getElementById("selected_media").innerHTML=selectOption;
+});
+
+
+document.getElementById("Btn2").addEventListener("click", function() {
+    var values = Array.from(document.getElementById("selectBox").options).map(e => e.value);
+    document.getElementById("selected_media").innerHTML = values;
+
+    //let selectOption= document.getElementById("selectBox").innerHTML;  
+  //document.getElementById("selected_media").innerHTML=selectOption;
+
+});
+
+</script>
+
+<div id="clear"></div>
+
+<br>
+<br>
+
+<center><div class="footer"><i>Copyright &copy; Eric Moore spring 2021
+<br>
+<p> <a href="https://www.facebook.com/">Facebook </a>
+<br> 
+<a href="https://twitter.com/home">Twitter</a>
+ <br> 
+<a href="https://www.instagram.com/">Instagram</a>
+ <br>
+ <a href="https://www.youtube.com/"> Youtube</a>
+</i>
+</div>
+</center>
+
+</body>
+</html>

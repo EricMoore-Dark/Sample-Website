@@ -1,0 +1,22 @@
+{
+    "Facebook": {
+        "Networking": "Social",
+        "MarketList": "Facebook",
+        "MarketCap": "430"
+    },
+    "Twitter": {
+        "Networking": "Microblogging",
+        "MarketList": "Twitter",
+        "MarketCap": "385"
+    },
+    "Instagram": {
+        "Networking": "Photo",
+        "MarketList": "Instagram",
+        "MarketCap": "218"
+    },
+    "YouTube": {
+        "Networking": "Video",
+        "MarketList": "YouTube",
+        "MarketCap": "195"
+    }
+}

@@ -1,0 +1,29 @@
+<script> 
+        var divContainer = document.getElementById("container"); 
+        divContainer.style.backgroundColor="yellow";
+        divContainer.style.border="5px dashed red";
+        divContainer.style.height="50vh";
+	divContainer.style.width="40%";
+        divContainer.style.padding="2px 5px 2px 5px";
+    function clickFunc(){
+        var selectBox = document.getElementById("selectBox");
+     // divContainer.style.border="5px dashed red";
+        document.getElementById("selected_media").innerHTML="";
+    }
+
+document.getElementById("Btn1").addEventListener("click", function() {
+  let selectOption= document.getElementById("selectBox").value;
+  document.getElementById("selected_media").innerHTML=selectOption;
+});
+
+
+document.getElementById("Btn2").addEventListener("click", function() {
+    var values = Array.from(document.getElementById("selectBox").options).map(e => e.value);
+    document.getElementById("selected_media").innerHTML = values;
+
+    //let selectOption= document.getElementById("selectBox").innerHTML;  
+  //document.getElementById("selected_media").innerHTML=selectOption;
+
+});
+
+</script>
